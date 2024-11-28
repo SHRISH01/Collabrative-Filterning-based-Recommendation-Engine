@@ -34,19 +34,12 @@
         <li><strong>Numpy</strong>: Used for numerical operations in the recommendation system.</li>
         <li><strong>HTML & CSS</strong>: For customizing the appearance of the Streamlit app to make it more user-friendly.</li>
     </ul>
-
-
-
-
-
 <div align="center">
     <h1 style="color: #FF6F61;"> Screenshots </h1>
-    <img src="Screenshots/screenshot1.png" alt="Joke Recommendation Engine" width="80%" style="border-radius: 8px; margin: 20px;">
-    <img src="Screenshots/screenshot2.png" alt="Joke Recommendation Engine" width="80%" style="border-radius: 8px; margin: 20px;">
+    <img src="Screenshots/screenshot1.png" alt="Joke Recommendation Engine" width="80%" style="border-radius: 14px; margin: 20px;">
+    <img src="Screenshots/screenshot2.png" alt="Joke Recommendation Engine" width="80%" style="border-radius: 14px; margin: 20px;">
     <p style="font-size: 18px; color: #333;">Discover personalized jokes tailored to your sense of humor using machine learning!</p>
 </div>
-
-
   <h2>Dataset</h2>
     <p>
         The dataset used for training the recommendation model contains user ratings for various jokes. The dataset is structured as follows:
@@ -93,8 +86,6 @@ source env/bin/activate  # For Linux/MacOS
 from surprise import SVD, Dataset, Reader
 from surprise.model_selection import train_test_split
 import pickle</pre><code>
-<b>
-
 <p>Model Binding</p>
 <pre><code>
 model = SVD()
@@ -104,31 +95,23 @@ model.fit(trainset)
 <pre><code>
 with open('joke_recommendation_model.pkl', 'wb') as file:
     pickle.dump(model, file)
-    </code></pre>
-    
+    </pre></code>
    <h2>Usage</h2>
     <h3>How to Get Recommendations</h3>
     <ol>
-        <li><strong>Rate a Joke</strong>: Once the app is running, you will be prompted to rate a joke on a scale of 0 to 10.</li>
+        <li><strong>Rate a Joke</strong>: Once the app is running, you will be prompted to rate a joke on a scale of -10 to 10.</li>
         <li><strong>Get Personalized Recommendations</strong>: Based on your rating, the system will recommend a set of jokes that are predicted to be of interest to you.</li>
         <li><strong>Explore Jokes</strong>: You can continue interacting with the system by rating more jokes and receiving updated recommendations.</li>
     </ol>
-
   <h2>Contributing</h2>
-    <p>
-        Feel free to fork the repository and contribute. You can submit bug fixes, new features, or improvements through pull requests. Ensure to follow proper coding standards and write tests for new functionality.
-    </p>
+    <p> Feel free to fork the repository and contribute. You can submit bug fixes, new features, or improvements through pull requests. Ensure to follow proper coding standards and write tests for new functionality.</p>
     <h2>License</h2>
-    <p>
-        This project is licensed under the MIT License - see the <code>LICENSE</code> file for details.
-    </p>
-
+    <p>This project is licensed under the MIT License - see the <code>LICENSE</code> file for details.</p>
    <h2>Acknowledgments</h2>
     <ul>
         <li><strong>Scikit-Surprise</strong> for providing the tools to build the collaborative filtering model.</li>
         <li><strong>Streamlit</strong> for creating an interactive interface with minimal effort.</li>
         <li><strong>Pandas</strong> and <strong>Numpy</strong> for easy data manipulation and handling.</li>
     </ul>
-
 </body>
 </html>
