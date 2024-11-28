@@ -1,0 +1,5 @@
+setup.py
+Joke_Recommendation_System_using_Collabrative_Based_Filtering.egg-info/PKG-INFO
+Joke_Recommendation_System_using_Collabrative_Based_Filtering.egg-info/SOURCES.txt
+Joke_Recommendation_System_using_Collabrative_Based_Filtering.egg-info/dependency_links.txt
+Joke_Recommendation_System_using_Collabrative_Based_Filtering.egg-info/top_level.txt
