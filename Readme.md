@@ -7,7 +7,6 @@
 <body>
 
    <h1>Joke Recommendation System</h1>
-
   <h2>Overview</h2>
     <p>
         The <strong>Joke Recommendation System</strong> is an innovative machine learning-based application designed to recommend personalized jokes to users based on their previous interactions with jokes. The system uses collaborative filtering to analyze user preferences and suggest jokes that a user is likely to enjoy. The underlying model is built using the <strong>Surprise</strong> library, a Python package for building and analyzing recommender systems. The app is built using <strong>Streamlit</strong>, a web framework for creating interactive web applications with Python.
@@ -34,11 +33,11 @@
         <li><strong>Numpy</strong>: Used for numerical operations in the recommendation system.</li>
         <li><strong>HTML & CSS</strong>: For customizing the appearance of the Streamlit app to make it more user-friendly.</li>
     </ul>
-<div align="center">
-    <h1 style="color: #FF6F61;"> Screenshots </h1>
-    <img src="Screenshots/screenshot1.png" alt="Joke Recommendation Engine" width="80%" style="border-radius: 14px; margin: 20px;">
-    <img src="Screenshots/screenshot2.png" alt="Joke Recommendation Engine" width="80%" style="border-radius: 14px; margin: 20px;">
-    <p style="font-size: 18px; color: #333;">Discover personalized jokes tailored to your sense of humor using machine learning!</p>
+<div class="center">
+    <h1>Screenshots</h1>
+    <img src="Screenshots/screenshot1.png" alt="Joke Recommendation Engine">
+    <img src="Screenshots/screenshot2.png" alt="Joke Recommendation Engine">
+    <p style="font-size: 18px;">Discover personalized jokes tailored to your sense of humor using machine learning!</p>
 </div>
   <h2>Dataset</h2>
     <p>
@@ -76,26 +75,19 @@ source env/bin/activate  # For Linux/MacOS
     </p>
 
    <h2>Model Training</h2>
-    <p>
-        The recommendation model is built using <strong>Collaborative Filtering</strong> with <strong>Matrix Factorization</strong>. The <code>scikit-surprise</code> library's <strong>SVD</strong> (Singular Value Decomposition) algorithm is used to train the model. Once the model is trained, it is saved as a <code>pickle</code> file, which can be loaded to make predictions on new user interactions.
-    </p>
+    <p>The recommendation model is built using <strong>Collaborative Filtering</strong> with <strong>Matrix Factorization</strong>. The <code>scikit-surprise</code> library's <strong>SVD</strong> (Singular Value Decomposition) algorithm is used to train the model. Once the model is trained, it is saved as a <code>pickle</code> file, which can be loaded to make predictions on new user interactions.</p>
     <p>
         To retrain the model, use the following code:
     </p>
-    <pre><code>
-from surprise import SVD, Dataset, Reader
+    <pre><code>from surprise import SVD, Dataset, Reader
 from surprise.model_selection import train_test_split
-import pickle</pre><code>
-<p>Model Binding</p>
-<pre><code>
-model = SVD()
-model.fit(trainset)
-</pre></code>
-<p>Model Saving</p>
-<pre><code>
-with open('joke_recommendation_model.pkl', 'wb') as file:
-    pickle.dump(model, file)
-    </pre></code>
+import pickle</code></pre>
+    <p>Model Binding</p>
+    <pre><code>model = SVD()
+model.fit(trainset)</code></pre>
+    <p>Model Saving</p>
+    <pre><code>with open('joke_recommendation_model.pkl', 'wb') as file:
+        pickle.dump(model, file)</code></pre>
    <h2>Usage</h2>
     <h3>How to Get Recommendations</h3>
     <ol>
