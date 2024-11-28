@@ -35,6 +35,18 @@
         <li><strong>HTML & CSS</strong>: For customizing the appearance of the Streamlit app to make it more user-friendly.</li>
     </ul>
 
+
+
+
+
+<div align="center">
+    <h1 style="color: #FF6F61;"> Screenshots </h1>
+    <img src="Screenshots/screenshot1.png" alt="Joke Recommendation Engine" width="80%" style="border-radius: 8px; margin: 20px;">
+    <img src="Screenshots/screenshot2.png" alt="Joke Recommendation Engine" width="80%" style="border-radius: 8px; margin: 20px;">
+    <p style="font-size: 18px; color: #333;">Discover personalized jokes tailored to your sense of humor using machine learning!</p>
+</div>
+
+
   <h2>Dataset</h2>
     <p>
         The dataset used for training the recommendation model contains user ratings for various jokes. The dataset is structured as follows:
@@ -42,7 +54,7 @@
     <ul>
         <li><strong>JokeId</strong>: Unique identifier for each joke.</li>
         <li><strong>UserId</strong>: Unique identifier for each user.</li>
-        <li><strong>Rating</strong>: The rating given by the user for the corresponding joke (range: 0-10).</li>
+        <li><strong>Rating</strong>: The rating given by the user for the corresponding joke (range: -10-10).</li>
     </ul>
 
    <h2>Installation</h2>
@@ -80,18 +92,16 @@ source env/bin/activate  # For Linux/MacOS
     <pre><code>
 from surprise import SVD, Dataset, Reader
 from surprise.model_selection import train_test_split
-import pickle
+import pickle</pre><code>
+<b>
 
-# Load dataset and train-test split
-reader = Reader(line_format='user item rating timestamp', sep='\t')
-data = Dataset.load_from_df(ratings_df[['UserId', 'JokeId', 'Rating']], reader)
-trainset, testset = train_test_split(data, test_size=0.2)
-
-# Initialize and train the SVD model
+<p>Model Binding</p>
+<pre><code>
 model = SVD()
 model.fit(trainset)
-
-# Save the trained model
+</pre></code>
+<p>Model Saving</p>
+<pre><code>
 with open('joke_recommendation_model.pkl', 'wb') as file:
     pickle.dump(model, file)
     </code></pre>
