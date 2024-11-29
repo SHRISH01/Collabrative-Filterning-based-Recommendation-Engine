@@ -52,7 +52,7 @@
    <h2>Installation</h2>
     <ol>
         <li><strong>Clone the Repository</strong>: To get started, clone the repository to your local machine:
-            <pre><code>git clone https://github.com/your_username/joke-recommendation-system.git</code></pre>
+            <pre><code>git clone https://github.com/SHRISH01/Collaborative-Filtering-Based-Recommendation-Engine.git</code></pre>
         </li>
         <li><strong>Create and Activate a Virtual Environment</strong>: It is recommended to use a virtual environment to manage dependencies:
             <pre><code>python -m venv env
