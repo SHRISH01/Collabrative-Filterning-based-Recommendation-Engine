@@ -64,7 +64,6 @@ source env/bin/activate  # For Linux/MacOS
             The <code>requirements.txt</code> includes all necessary packages such as <code>scikit-surprise</code>, <code>pandas</code>, <code>numpy</code>, <code>streamlit</code>, etc.
         </li>
     </ol>
-
   <h2>Running the App</h2>
     <p>
         Once the dependencies are installed, you can run the Streamlit app locally:
